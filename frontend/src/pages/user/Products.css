@@ -1,0 +1,48 @@
+/* Products Page Specific Styles */
+
+.filter-panel {
+  position: sticky;
+  top: 80px;
+}
+
+@media (max-width: 768px) {
+  .filter-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    border-radius: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    animation: slideInLeft 0.3s ease;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Filter Animations */
+.MuiCheckbox-root {
+  transition: all 0.3s ease;
+}
+
+.MuiCheckbox-root:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .filter-panel {
+    padding: 16px;
+  }
+}

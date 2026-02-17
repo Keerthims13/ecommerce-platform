@@ -1,0 +1,64 @@
+/* Cart Page Specific Styles */
+
+.cart-item {
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cart-item:hover {
+  animation: none;
+}
+
+/* Quantity selector animation */
+.quantity-control {
+  transition: all 0.3s ease;
+}
+
+.quantity-control:hover {
+  transform: scale(1.05);
+}
+
+/* Price summary sticky positioning */
+@media (max-width: 960px) {
+  .price-summary {
+    position: relative;
+    top: auto;
+  }
+}
+
+/* Empty cart styling */
+.empty-cart-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .cart-item {
+    padding: 16px;
+  }
+
+  .price-summary {
+    padding: 16px;
+  }
+}
